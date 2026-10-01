@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Large datasets & raw data (as per PLAN.md)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.npy
+data/processed/*.npz
+
+# Model weights and artifacts
+saved/*.h5
+saved/*.keras
+saved/*.pkl
+saved/*.joblib
+data/processed/*.pkl
+
+# Operating System files
+.DS_Store
+Thumbs.db

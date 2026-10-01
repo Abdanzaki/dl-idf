@@ -1,0 +1,19 @@
+# ==============================================================================
+# DL-IDF: Deep Learning-Based Intrusion Detection Framework for Industrial IoT
+# Phase 1: Core Dependencies (Data Processing, EDA, and Visualization)
+# Pinned for Python 3.10 - 3.12 compatibility
+# ==============================================================================
+
+# Data Manipulation & Scientific Computing
+pandas==2.1.4
+numpy==1.26.4
+
+# Classical Machine Learning & Preprocessing Utilities
+scikit-learn>=1.4.0,<=1.9.1
+
+# Interactive Notebook Environment
+jupyter>=1.0.0
+
+# Plotting & Visualization Libraries
+matplotlib==3.6.3
+seaborn==0.13.2
