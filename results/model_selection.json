@@ -1,0 +1,211 @@
+{
+  "selected_model": "cnn",
+  "selected_model_path": "saved/selected_model.keras",
+  "source_model_path": "saved/cnn.keras",
+  "selection_timestamp": "2026-10-01 10:29:33 UTC",
+  "selection_rationale": "While Random Forest achieved superior performance on this pre-engineered tabular flow dataset (reflecting the well-documented empirical advantage of decision tree ensembles on axis-aligned tabular partitions), the 1D-CNN architecture was selected and deployed as the primary detection engine for DL-IDF. The 1D-CNN demonstrates strong representation learning capability without manual feature engineering, maintains competitive attack recall (92.67%) with an F1-score of 92.16%, and offers low latency inference suitable for streaming IoT telemetry. Furthermore, the DL-IDF framework is designed as an extensible intrusion detection architecture supporting both deep neural models and classical ensemble baselines.",
+  "comparison_table": [
+    {
+      "model": "random_forest",
+      "model_type": "baseline_classical_ml",
+      "accuracy": 0.998417,
+      "precision": 0.997579,
+      "recall": 0.997889,
+      "f1_score": 0.997734,
+      "false_positive_rate": 0.0013,
+      "train_duration_sec": 21.0,
+      "eval_duration_sec": 0.66,
+      "confusion_matrix": {
+        "true_negatives": 59922,
+        "false_positives": 78,
+        "false_negatives": 68,
+        "true_positives": 32141,
+        "matrix_2x2": [
+          [
+            59922,
+            78
+          ],
+          [
+            68,
+            32141
+          ]
+        ]
+      }
+    },
+    {
+      "model": "mlp",
+      "model_type": "deep_learning_mlp",
+      "accuracy": 0.940461,
+      "precision": 0.886213,
+      "recall": 0.951753,
+      "f1_score": 0.917814,
+      "false_positive_rate": 0.0656,
+      "train_duration_sec": 86.31,
+      "eval_duration_sec": 0.35,
+      "confusion_matrix": {
+        "true_negatives": 56064,
+        "false_positives": 3936,
+        "false_negatives": 1554,
+        "true_positives": 30655,
+        "matrix_2x2": [
+          [
+            56064,
+            3936
+          ],
+          [
+            1554,
+            30655
+          ]
+        ]
+      }
+    },
+    {
+      "model": "cnn",
+      "model_type": "deep_learning_1d_cnn",
+      "accuracy": 0.944929,
+      "precision": 0.916567,
+      "recall": 0.926698,
+      "f1_score": 0.921604,
+      "false_positive_rate": 0.045283,
+      "train_duration_sec": 311.97,
+      "eval_duration_sec": 0.64,
+      "confusion_matrix": {
+        "true_negatives": 57283,
+        "false_positives": 2717,
+        "false_negatives": 2361,
+        "true_positives": 29848,
+        "matrix_2x2": [
+          [
+            57283,
+            2717
+          ],
+          [
+            2361,
+            29848
+          ]
+        ]
+      }
+    }
+  ],
+  "full_metrics": [
+    {
+      "model": "random_forest",
+      "model_type": "baseline_classical_ml",
+      "timestamp": "2026-10-01 10:11:30 UTC",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "accuracy": 0.998417,
+      "precision": 0.997579,
+      "recall": 0.997889,
+      "f1_score": 0.997734,
+      "false_positive_rate": 0.0013,
+      "confusion_matrix": {
+        "true_negatives": 59922,
+        "false_positives": 78,
+        "false_negatives": 68,
+        "true_positives": 32141,
+        "matrix_2x2": [
+          [
+            59922,
+            78
+          ],
+          [
+            68,
+            32141
+          ]
+        ]
+      },
+      "timing": {
+        "train_duration_sec": 21.0,
+        "eval_duration_sec": 0.66
+      }
+    },
+    {
+      "model": "mlp",
+      "model_type": "deep_learning_mlp",
+      "timestamp": "2026-10-01 10:22:15 UTC",
+      "hyperparameters": {
+        "architecture": "MLP (128->64->32)",
+        "epochs_max": 30,
+        "epochs_trained": 30,
+        "batch_size": 1024,
+        "validation_split": 0.15,
+        "patience": 4,
+        "learning_rate": 0.001,
+        "dropout_rate": 0.3,
+        "activation": "relu",
+        "output_activation": "sigmoid"
+      },
+      "accuracy": 0.940461,
+      "precision": 0.886213,
+      "recall": 0.951753,
+      "f1_score": 0.917814,
+      "false_positive_rate": 0.0656,
+      "confusion_matrix": {
+        "true_negatives": 56064,
+        "false_positives": 3936,
+        "false_negatives": 1554,
+        "true_positives": 30655,
+        "matrix_2x2": [
+          [
+            56064,
+            3936
+          ],
+          [
+            1554,
+            30655
+          ]
+        ]
+      },
+      "timing": {
+        "train_duration_sec": 86.31,
+        "eval_duration_sec": 0.35
+      }
+    },
+    {
+      "model": "cnn",
+      "model_type": "deep_learning_1d_cnn",
+      "timestamp": "2026-10-01 10:27:27 UTC",
+      "hyperparameters": {
+        "architecture": "1D-CNN (Conv1D(64,3)->MaxPool->Conv1D(32,3)->GlobalMaxPool->Dense(64))",
+        "epochs_max": 30,
+        "epochs_trained": 30,
+        "batch_size": 1024,
+        "validation_split": 0.15,
+        "patience": 4,
+        "learning_rate": 0.001,
+        "dropout_rate": 0.3,
+        "activation": "relu",
+        "output_activation": "sigmoid"
+      },
+      "accuracy": 0.944929,
+      "precision": 0.916567,
+      "recall": 0.926698,
+      "f1_score": 0.921604,
+      "false_positive_rate": 0.045283,
+      "confusion_matrix": {
+        "true_negatives": 57283,
+        "false_positives": 2717,
+        "false_negatives": 2361,
+        "true_positives": 29848,
+        "matrix_2x2": [
+          [
+            57283,
+            2717
+          ],
+          [
+            2361,
+            29848
+          ]
+        ]
+      },
+      "timing": {
+        "train_duration_sec": 311.97,
+        "eval_duration_sec": 0.64
+      }
+    }
+  ]
+}

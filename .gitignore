@@ -17,12 +17,12 @@ data/processed/*.csv
 data/processed/*.npy
 data/processed/*.npz
 
-# Model weights and artifacts
+# Model weights and artifacts policy:
+# Trained model files (~138 KB to 14.5 MB) are tracked in git for seamless portability
+# so examiners and evaluators can immediately run the API and Dashboard without retraining.
+# Temporary checkpoints or HDF5 exports are ignored:
 saved/*.h5
-saved/*.keras
-saved/*.pkl
 saved/*.joblib
-data/processed/*.pkl
 
 # Operating System files
 .DS_Store

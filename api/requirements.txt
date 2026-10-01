@@ -1,0 +1,11 @@
+# ==============================================================================
+# DL-IDF: Flask API Microservice Dependencies Note
+# ==============================================================================
+# The inference microservice reuses the pinned project dependencies from the root
+# requirements.txt file. Key packages used by api/app.py:
+#   - flask==3.1.3            (Lightweight WSGI web server framework)
+#   - tensorflow-cpu==2.17.0  (Keras model loading & tensor graph inference)
+#   - scikit-learn>=1.4.0     (StandardScaler feature normalization)
+#   - numpy==1.26.4           (Array manipulation & tensor reshaping)
+# ==============================================================================
+-r ../requirements.txt

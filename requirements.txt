@@ -9,7 +9,8 @@ pandas==2.1.4
 numpy==1.26.4
 
 # Classical Machine Learning & Preprocessing Utilities
-scikit-learn>=1.4.0,<=1.9.1
+scikit-learn==1.9.1
+joblib==1.6.0
 
 # Interactive Notebook Environment
 jupyter>=1.0.0
@@ -17,3 +18,12 @@ jupyter>=1.0.0
 # Plotting & Visualization Libraries
 matplotlib==3.6.3
 seaborn==0.13.2
+
+# Deep Learning Framework (Phase 4)
+tensorflow-cpu==2.18.0
+
+# REST API & Inference Serving (Phase 6)
+flask==3.1.3
+
+# Web Dashboard (Phase 7)
+streamlit==1.64.0
